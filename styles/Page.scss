@@ -1,0 +1,33 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  
+  h1 {
+    margin-right: 10px;
+  }
+}
+
+.list {
+  line-height: 1.5em;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr;
+
+  padding: 100px max(20px, 10vw)
+}
+
+@media only screen and (max-width: 800px) {
+  .section {
+    grid-template-rows: 1fr 10px 1fr;
+    grid-template-columns: none;
+  }
+}

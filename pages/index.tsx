@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       <main className="main">
         <div className="section">
           <div>
-            <Image src='/images/balls.gif' width="400" height="400" alt="bouncing balls"/>
+            <iframe src="https://lino-levan.github.io/smoll-physics/" width="400" height="400" scrolling="no" style={{boxSizing:"border-box",display:"inline-block",overflow:"hidden", border:0, margin:0, padding:0, position: "relative", maxWidth:"100%", boxShadow: "0px 0px 32px rgba(0,0,0,0.1);"}}></iframe>
           </div>
           <div />
           <div>

@@ -27,11 +27,11 @@ const Home: NextPage = () => {
               <h1>Hi there</h1>
             </div>
             <p>
-              I&apos;m Lino Le Van, an independent developer who mostly contributes to open source projects in my free time.
+              I&apos;m Lino Le Van, an independent developer who contributes to open source projects in my free time.
             </p>
             <p className="list">
               ☁️ I&apos;m currently focusing on Pintform and Thoughtlesspack as my personal projects<br />
-              🦀 I&apos;m currently learning Rust to build speedy applications<br />
+              🦀 I&apos;m also learning Rust to build speedy applications<br />
               👥 I&apos;m having fun contributing to Minicraft<br />
               💻 Ask me about flash preservation!<br />
               😄 Pronouns: He/Him<br />

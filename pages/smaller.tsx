@@ -104,6 +104,24 @@ const Elemental: NextPage = () => {
             <Image src='/images/emoji_maker.png' width="1012" height="848" alt="Connect 4"/>
           </div>
         </div>
+        <div className="section">
+          <div>
+              <Image src='/images/geoms.png' width="1232" height="574" alt="Geoms.io"/>
+          </div>
+          <div />
+          <div>
+            <div className="header">
+              <h1>Geoms.io</h1>
+            </div>
+            <p>
+              My first io-style game!
+            </p>
+            <p className="list">
+              Closed Source :(<br />
+              Demo: <a href="http://geoms.linolevan.com:9999">http://geoms.linolevan.com</a><br />
+            </p>
+          </div>
+        </div>
         <div>
           <div className="header">
             <h1>And More... (This page is still being built)</h1>

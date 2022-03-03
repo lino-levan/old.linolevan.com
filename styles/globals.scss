@@ -1,17 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Schoolbell&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Fredoka', sans-serif;
+
+  background-color: white;
 }
 
 * {
   box-sizing: border-box;
-  --text-color: #555588;
 }
 
 a {
-  color: blue;
-  text-decoration: underline;
+  // color: #5d9e5e;
+  text-decoration: none;
+}
+
+.tilium {
+  font-family: 'Schoolbell', cursive;
 }

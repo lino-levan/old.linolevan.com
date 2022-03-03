@@ -105,6 +105,13 @@ const Elemental: NextPage = () => {
       demo: "http://geoms.linolevan.com:42069",
       gradient: "from-red-200 via-gray-300 to-blue-300"
     },
+    {
+      name: "Khanacademy",
+      description: "I used to do most of my visualizations on Khanacademy.",
+      image: "/screenshots/khanacademy.png",
+      demo: "https://www.khanacademy.org/profile/Nickolos/projects",
+      gradient: "from-rose-100 to-teal-100"
+    },
   ]
 
 

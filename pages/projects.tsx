@@ -3,27 +3,10 @@ import { GoLink, GoMarkGithub } from "react-icons/go";
 import Head from "next/head"
 import Image from 'next/image'
 import Header from "../components/Header"
+import textProcessor from "../lib/TextProcessor";
 
 // https://hypercolor.dev
 
-function generateParts(text: string) {
-  const linked: any = {
-    "Lancerhacks": "https://lancerhacks.com",
-    "ML5.js": "https://ml5js.org",
-    "@Oleks": "https://github.com/OlexG",
-  }
-
-  let out = []
-
-  for(let word of text.split(" ")) {
-    if(linked.hasOwnProperty(word)) {
-      out.push(<a href={linked[word]} target="_blank" rel="noreferrer" className="inline bg-opacity-30 text-emerald-600 bg-emerald-300 hover:bg-emerald-400 hover:bg-opacity-30">{`${word} `}</a>)
-    } else {
-      out.push(<p className="inline">{`${word} `}</p>)
-    }
-  }
-  return out
-}
 
 interface IProject {
   name: string
@@ -148,7 +131,7 @@ const Elemental: NextPage = () => {
                     : null
                   }
                 </h1>
-                <p>{generateParts(project.description)}</p>
+                <p>{textProcessor(project.description)}</p>
               </div>
             </div>
           ))

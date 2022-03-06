@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 
 const Header = () => {
-  let links = [{name:"~/projects", url:"/projects"}]
+  let links = [{name:"~/projects", url:"/projects"}, {name:"~/posts", url:"/posts"}]
 
   return (
     <div className="fixed z-10 flex min-w-full items-center justify-between py-4 px-4 backdrop-blur-[20px] backdrop-saturate-[1.8] backdrop-filter sm:px-10">

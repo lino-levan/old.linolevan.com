@@ -25,11 +25,16 @@ const Post: NextPage = (props: any) => {
 
       <main>
         <Header />
-        <div className="flex py-28 justify-center items-center">
+        <div className="flex pt-28 justify-center items-center px-6">
           <div className="max-w-4xl">
             <h1 className="text-4xl">{post.title}</h1>
             <p>{post.date}</p>
             <p>{textProcessor(post.post)}</p>
+          </div>
+        </div>
+        <div className="flex justify-center items-center pb-10 px-6">
+          <div className="max-w-4xl">
+            <a href="mailto:lino.levan@gmail.com?subject=SUBSCRIBING_REQUEST&body=To subscribe, just press send!" className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded">Subcribe to the Blog</a>
           </div>
         </div>
       </main>

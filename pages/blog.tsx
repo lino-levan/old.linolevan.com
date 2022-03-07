@@ -6,7 +6,7 @@ import Header from '../components/Header';
 import { getPosts, IPost } from '../lib/getPosts';
 import textProcessor from '../lib/TextProcessor';
 
-const Posts: NextPage = (props: any) => {
+const Blog: NextPage = (props: any) => {
 
   let posts: [string, IPost][] = Object.entries(props.posts)
   
@@ -20,14 +20,14 @@ const Posts: NextPage = (props: any) => {
 
       <main>
         <Header />
-        <div className="flex justify-center items-center py-28">
+        <div className="flex justify-center items-center py-28 px-6">
           <div>
             {
               posts.map(([key, post])=>(
                 <div key={key} className="flex gap-20">
                   <p className=' text-slate-400'>{post.date}</p>
-                  <div className='w-96'>
-                    <h1 className='text-2xl text-emerald-500'><a href={`/posts/${key}`}>{post.title}</a></h1>
+                  <div className='max-w-md'>
+                    <h1 className='text-2xl text-emerald-500'><a href={`/blog/${key}`}>{post.title}</a></h1>
                     <h2 className='text-md text-emerald-700'>{post.tags.map(tag=>`#${tag}`).join(" ")}</h2>
                     <p>{textProcessor(post.post.split("\n")[0])}</p>
                   </div>
@@ -41,7 +41,7 @@ const Posts: NextPage = (props: any) => {
   )
 }
 
-export default Posts
+export default Blog
 
 export async function getStaticProps() {
   const posts = getPosts()

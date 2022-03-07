@@ -17,7 +17,7 @@ interface IProject {
   gradient: string
 }
 
-const Elemental: NextPage = () => {
+const Projects: NextPage = () => {
 
   const projects: IProject[] = [
     {
@@ -106,7 +106,7 @@ const Elemental: NextPage = () => {
       </Head>
 
       <Header />
-      <main className="py-28 flex flex-col items-center max-w-full">
+      <main className="py-28 flex flex-col items-center max-w-full px-6">
         {
           projects.map((project)=> (
             <div key={project.name} className={`rounded-xl mt-6 p-6 bg-gradient-to-tr max-w-2xl shadow-lg ${project.gradient}`}>
@@ -141,4 +141,4 @@ const Elemental: NextPage = () => {
   )
 }
 
-export default Elemental
+export default Projects

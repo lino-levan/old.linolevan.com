@@ -46,7 +46,7 @@ function textProcessor(text: string) {
     } else if(URLRegex.test(chunk)) {
       out.push(<a key={i} href={chunk} target="_blank" rel="noreferrer" className="inline bg-opacity-30 text-emerald-600 bg-emerald-300 hover:bg-emerald-400 hover:bg-opacity-30">{`${chunk}`}</a>)
     } else if(chunk === "\n") {
-      out.push(<br />)
+      out.push(<br key={i}/>)
     } else {
       out.push(<span key={i} className="inline">{`${chunk} `}</span>)
     }

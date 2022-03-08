@@ -16,6 +16,7 @@
     "sass": "^1.44.0"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.2.7",
     "@types/node": "16.11.12",
     "@types/react": "17.0.37",
     "autoprefixer": "^10.4.2",

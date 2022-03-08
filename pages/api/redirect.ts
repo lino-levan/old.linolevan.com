@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
+import { NextApiRequest, NextApiResponse } from "next/types";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if(!req.query?.link)

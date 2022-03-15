@@ -21,6 +21,14 @@ const Projects: NextPage = () => {
 
   const projects: IProject[] = [
     {
+      name: "Opensearch",
+      description: "My attempt at making a half-decent search engine",
+      image: "/screenshots/opensearch.png",
+      demo: "https://opensearch.linolevan.com",
+      github: "https://github.com/lino-levan/open-search-site.git",
+      gradient: "from-gray-300 to-gray-100 bg-gradient-to-r"
+    },
+    {
       name: "Pintform",
       description: "The world's first form service that works for you. Make beautiful forms quickly, with all of the power and flexibility you'll ever need.",
       image: "/screenshots/pintform.png",

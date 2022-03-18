@@ -37,11 +37,13 @@ export function getPosts() {
 
   for(let post of allPostsData) {
     // Process fileContents
-    out[post.id] = {
-      title: post.data.title,
-      date: post.data.date,
-      post: post.content,
-      tags: post.data.tags
+    if(!post.data.hidden) {
+      out[post.id] = {
+        title: post.data.title,
+        date: post.data.date,
+        post: post.content,
+        tags: post.data.tags
+      }
     }
   }
 

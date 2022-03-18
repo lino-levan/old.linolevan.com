@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 import Header from '../components/Header';
+import StyledMarkdown from '../components/StyledMarkdown';
 import { getPosts, IPost } from '../lib/getPosts';
 import textProcessor from '../lib/TextProcessor';
 
@@ -26,13 +27,13 @@ const Blog: NextPage = (props: any) => {
         <div className="flex justify-center items-center py-28 px-6">
           <div>
             {
-              posts.map(([key, post])=>(
-                <div key={key} className="flex gap-20">
-                  <p className=' text-slate-400'>{post.date}</p>
+              posts.sort((a, b)=>new Date(b[1].date).getTime() - new Date(a[1].date).getTime()).map(([key, post], index)=>(
+                <div key={key} className={`flex gap-x-10 py-3 ${index < posts.length - 1 ? "border-b-slate-200 border-b" : ""}`}>
+                  <p className=' text-slate-400 w-10'>{post.date}</p>
                   <div className='max-w-md'>
                     <h1 className='text-2xl text-emerald-500'><a href={`/blog/${key}`}>{post.title}</a></h1>
                     <h2 className='text-md text-emerald-700'>{post.tags.map(tag=>`#${tag}`).join(" ")}</h2>
-                    <p>{textProcessor(post.post.split("\n")[0])}</p>
+                    <StyledMarkdown>{post.post.split("\n")[0]}</StyledMarkdown>
                   </div>
                 </div>
               ))

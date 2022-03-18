@@ -1,9 +1,10 @@
 import { NextPage } from 'next'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+
 import Header from '../../components/Header'
+import StyledMarkdown from '../../components/StyledMarkdown'
 import { getPosts, IPost } from '../../lib/getPosts'
-import textProcessor from '../../lib/TextProcessor'
 
 const Post: NextPage = (props: any) => {
   const router = useRouter()
@@ -32,10 +33,10 @@ const Post: NextPage = (props: any) => {
           <div className="max-w-4xl">
             <h1 className="text-4xl">{post.title}</h1>
             <p>{post.date}</p>
-            <p>{textProcessor(post.post)}</p>
+            <StyledMarkdown>{post.post}</StyledMarkdown>
           </div>
         </div>
-        <div className="flex justify-center items-center pb-10 px-6">
+        <div className="flex justify-center items-center py-10 px-6">
           <div className="max-w-4xl">
             <a href="mailto:lino.levan@gmail.com?subject=SUBSCRIBING_REQUEST&body=To subscribe, just press send!" className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded">Subcribe to the Blog</a>
           </div>

@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "lancerhacks_v_takeaways.md",
+            "file": "four_new_technologies_to_watch.md",
             "mode": "preview"
           }
         }
@@ -68,7 +68,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "lancerhacks_v_takeaways.md",
+                "file": "four_new_technologies_to_watch.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +88,8 @@
   },
   "active": "e3762e7f6a7d7797",
   "lastOpenFiles": [
-    "lancerhacks_v_takeaways.md",
-    "lancerhacks_v.md"
+    "four_new_technologies_to_watch.md",
+    "lancerhacks_v.md",
+    "lancerhacks_v_takeaways.md"
   ]
 }

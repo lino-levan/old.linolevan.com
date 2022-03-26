@@ -17,7 +17,7 @@ Tauri is something I've been waiting for, for a while.
 According to their website, they are a way to
 > Build smaller, faster, and more secure desktop applications with a web frontend
 
-![](https://miro.medium.com/max/1400/0*pvk1hPdsJjKcVwOn.png)
+![](/images/tauri.png)
 
 Essentially, Tauri is a way to build "native" applications using a web frontend. What's the difference between this and Electron? There are three big ones:
 1. It's a lot more disk efficient because it doesn't bundle in a whole chromium environment
@@ -33,7 +33,7 @@ Deno is also a web developer's dream. Before I get too much into the advantages,
 
 That's the promise of Deno.
 
-![](https://i0.wp.com/startfunction.com/wp-content/uploads/2020/06/deno-will-stop-using-typescript.png?w=1200&ssl=1)
+![](/images/deno.png)
 
 For a little backstory, Deno was announced at a talk by Ryan Dahl (the creator of a small project called `node.js`) in which he described the 10 biggest regrets he had with how he originally made node. It was essentially Dahl's attempt at fixing all of the mistakes he made originally with node by starting fresh. Originally written in Go, and eventually rewritten finally in Rust, Deno 1.0 released in May, 2020. There has been 20 major revisions since then and the audience has grown immensely. Deno is officially a funded company now, and has been and is picking up a lot of traction.
 
@@ -59,7 +59,7 @@ The rest of the tools on this list are deno specific, including this one. AlephJ
 - No config
 - Plugin ecosystem
 
-![](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fexternal-preview.redd.it%2FNfXg22EtXFzkGx9BZefaYUwV4w3i0PIBNPl45JKoWMI.jpg%3Fauto%3Dwebp%26s%3Dcbb0f41a6349a5aa18139fe9b5a0b327d06198c1&f=1&nofb=1)
+![](/images/aleph.jpeg)
 
 One of the features that I'm really in love with is the `useDeno` hook.
 

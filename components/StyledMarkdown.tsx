@@ -24,7 +24,12 @@ function StyledMarkdown({children}: {children: string}) {
       },
       pre({node, children, ...props}) {
         let raw = (children?.[0] as any)?.props?.children?.[0]
-        return <pre className="bg-slate-100 p-1 rounded shadow">{raw?raw:children}</pre>
+        return <pre className="bg-slate-100 p-1 rounded shadow overflow-auto">{raw?raw:children}</pre>
+      },
+      img({node, children, src, alt, ...props}) {
+        // className="h-full w-full object-contain"
+        // eslint-disable-next-line @next/next/no-img-element
+        return <img src={src?.includes("https")?src:("/posts"+src)} alt={alt}  />
       },
     }}>
       {children}

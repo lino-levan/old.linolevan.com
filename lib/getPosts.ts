@@ -11,7 +11,7 @@ export interface IPost {
   tags: string[]
 }
 
-const postsDirectory = path.join(process.cwd(), 'posts')
+const postsDirectory = path.join(process.cwd(), 'public/posts')
 
 export function getPosts() {
   const fileNames = fs.readdirSync(postsDirectory)

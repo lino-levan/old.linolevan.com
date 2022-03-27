@@ -7,8 +7,18 @@ function StyledMarkdown({children}: {children: string}) {
       a({node, children, href, ...props}) {
         return <a href={href} target="_blank" rel="noreferrer" className='bg-opacity-30 text-emerald-600 bg-emerald-300 hover:bg-emerald-400 hover:bg-opacity-30'>{children}</a>
       },
-      li({node, children, ...props}) {
-        return <li>- {children}</li>
+      li({node, children, ordered, index, ...props}) {
+        if(ordered) {
+          return <li>{index+1}. {children}</li>
+        } else {
+          return <li>- {children}</li>
+        }
+      },
+      ul({node, children, ...props}) {
+        return <ul className="ml-4">{children}</ul>
+      },
+      ol({node, children, ...props}) {
+        return <ol className="ml-4">{children}</ol>
       },
       h1({node, children, ...props}) {
         return <h1 className="text-4xl">{children}</h1>

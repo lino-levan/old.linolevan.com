@@ -1,4 +1,3 @@
-import { ReactNode } from "react"
 import ReactMarkdown from "react-markdown"
 
 function StyledMarkdown({children}: {children: string}) {

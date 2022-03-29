@@ -1,18 +1,38 @@
 import { NextApiRequest, NextApiResponse } from "next/types";
 
-const emailRegex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
+// yoinked from: https://github.com/Ihatetomatoes/nextjs-101-convertkit/blob/master/src/pages/api/subscribe.js
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { email } = req.query;
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if(!req.query?.email)
-    return res.status(400).send('No Email Included in Query')
+  if (!email) {
+    return res.status(400).json({ error: "Email is required." });
+  }
 
-  if(typeof req.query.email !== "string")
-    return res.status(400).send('Type of Email is Wrong')
-  
-  if(!emailRegex.test(req.query.email))
-    return res.status(400).send('Email appears malformed')
+  try {
+    const FORM_ID = process.env.CONVERTKIT_FORM_ID;
+    const API_KEY = process.env.CONVERTKIT_API_KEY;
+    const API_URL = process.env.CONVERTKIT_API_URL;
 
-  // TODO: Add person to subscription list somehow
+    //what do we want to send to CK?
+    const data = { email, api_key: API_KEY };
 
-  res.status(200).json({ email: req.query.email })
-}
+    // ship it :)
+    const response = await fetch(`${API_URL}forms/${FORM_ID}/subscribe`, {
+      body: JSON.stringify(data),
+      headers: { "Content-Type": "application/json" },
+      method: "POST",
+    });
+
+    // return any error from CK
+    if (response.status >= 400) {
+      return res
+        .status(400)
+        .json({ error: "There was an error subscribing to the list." });
+    }
+
+    // happy days
+    return res.status(201).json({ error: "" });
+  } catch (error: any) {
+    return res.status(500).json({ error: error.message || error.toString() });
+  }
+};

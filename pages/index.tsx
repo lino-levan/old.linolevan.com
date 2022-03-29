@@ -16,10 +16,7 @@ const Home: NextPage = () => {
 
       <main>
         <Header />
-        <div className="grid gap-3 py-28 grid-flow-row md:grid-flow-col">
-          <div className="flex justify-center content-center">
-            <iframe src="https://lino-levan.github.io/smoll-physics/" width="400" height="400" scrolling="no" className="rounded-xl px-4 py-4 bg-teal-50"/>
-          </div>
+        <div className="gap-3 py-28 flex justify-center flex-wrap">
           <div className="flex justify-center content-center">
             <div className="rounded-xl px-4 py-4 bg-gradient-to-tr from-teal-100 to-teal-50 w-96 h-min">
               <div className="flex mb-4 text-4xl">
@@ -37,6 +34,9 @@ const Home: NextPage = () => {
                 😄 Pronouns: He/Him<br />
               </p>
             </div>
+          </div>
+          <div className="flex justify-center content-center">
+            <iframe src="https://lino-levan.github.io/smoll-physics/" width="400" height="400" scrolling="no" className="rounded-xl px-4 py-4 bg-teal-50"/>
           </div>
         </div>
       </main>

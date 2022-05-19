@@ -25,6 +25,12 @@ function StyledMarkdown({children}: {children: string}) {
       h2({node, children, ...props}) {
         return <h2 className="text-3xl">{children}</h2>
       },
+      h3({node, children, ...props}) {
+        return <h3 className="text-2xl">{children}</h3>
+      },
+      h4({node, children, ...props}) {
+        return <h4 className="text-xl">{children}</h4>
+      },
       blockquote({node, children, ...props}) {
         return <blockquote className="border-l pl-4 italic">{children}</blockquote>
       },

@@ -21,6 +21,14 @@ const Projects: NextPage = () => {
 
   const projects: IProject[] = [
     {
+      name: "KClient",
+      description: "A khanacademy program viewer and editor.",
+      image: "/screenshots/kclient.png",
+      demo: "https://kclient.linolevan.com",
+      github: "https://github.com/lino-levan/kclient",
+      gradient: "from-indigo-300 to-indigo-100"
+    },
+    {
       name: "Opensearch",
       description: "My attempt at making a half-decent search engine",
       image: "/screenshots/opensearch.png",

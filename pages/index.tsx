@@ -1,8 +1,10 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
+import StyledMarkdown from '../components/StyledMarkdown'
+import { getUpdates } from '../lib/getMarkdown'
 
-const Home: NextPage = () => {
+const Home: NextPage<{updates: any[]}> = ({updates}) => {
   return (
     <>
       <Head>
@@ -39,9 +41,30 @@ const Home: NextPage = () => {
             <iframe src="https://lino-levan.github.io/smoll-physics/" width="400" height="400" scrolling="no" className="rounded-xl px-4 py-4 bg-teal-50"/>
           </div>
         </div>
+        <div className="gap-3 pb-28 px-5 flex flex-col items-center flex-wrap">
+          <h2 className="text-emerald-500 text-3xl">~ Updates ~</h2>
+          {
+            updates.map((update, i)=>(
+              <div key={i} className="flex gap-4 text-center">
+                <p>{update.date}</p>
+                <StyledMarkdown>{update.content}</StyledMarkdown>
+              </div>
+            ))
+          }
+        </div>
       </main>
     </>
   )
 }
 
 export default Home
+
+export async function getStaticProps() {
+  const updates = getUpdates()
+
+  return {
+    props: {
+      updates
+    },
+  }
+}

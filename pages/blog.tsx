@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import Header from '../components/Header';
 import StyledMarkdown from '../components/StyledMarkdown';
-import { getPosts, IPost } from '../lib/getPosts';
+import { getPosts, IPost } from '../lib/getMarkdown';
 import textProcessor from '../lib/TextProcessor';
 
 const Blog: NextPage = (props: any) => {

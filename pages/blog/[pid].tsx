@@ -5,7 +5,7 @@ import { useRef, useState } from 'react'
 
 import Header from '../../components/Header'
 import StyledMarkdown from '../../components/StyledMarkdown'
-import { getPosts, IPost } from '../../lib/getPosts'
+import { getPosts, IPost } from '../../lib/getMarkdown'
 
 const Post: NextPage = (props: any) => {
   const input = useRef(null)

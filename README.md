@@ -1,4 +1,6 @@
-# Lino Le Van's Personal Site
+# Lino's Personal Site
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/4f485927-7de2-4fb0-8f54-9c81d770065f/deploy-status)](https://app.netlify.com/sites/linolevan/deploys)
 
 ## Develop
 

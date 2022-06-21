@@ -42,10 +42,17 @@ const Home: NextPage<{updates: IUpdate[], posts: Record<string,IPost>}> = ({upda
       <main>
         <Header />
         <div className="pt-28 w-full h-screen">
-          <Chrono mode="VERTICAL">
+          <Chrono mode="VERTICAL" hideControls={true} theme={{
+            primary: 'rgb(229, 231, 235)',
+            secondary: 'rgba(110, 231, 183)',
+            cardBgColor: 'white',
+            cardForeColor: 'white',
+            titleColor: 'black',
+            titleColorActive: 'black',
+          }}>
             {
               items.map((element, i)=>(
-                <div key={i} className="flex flex-col gap-4 text-center">
+                <div key={i} className="flex flex-col gap-4 text-center cursor-pointer w-full h-48">
                   <h1 className="text-2xl">{element.date}</h1>
                   <StyledMarkdown>{element.content}</StyledMarkdown>
                 </div>

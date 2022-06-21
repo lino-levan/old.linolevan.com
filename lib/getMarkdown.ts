@@ -11,6 +11,11 @@ export interface IPost {
   tags: string[]
 }
 
+export interface IUpdate {
+  content: string
+  date: string
+}
+
 const postsDirectory = path.join(process.cwd(), 'public/posts')
 const updatesDirectory = path.join(process.cwd(), 'public/updates')
 
@@ -37,7 +42,7 @@ export function getUpdates() {
   return allUpdatesData.map(post => ({
     content: post.content,
     date: post.data.date,
-  }))
+  })).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
 }
 
 

@@ -2,9 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import StyledMarkdown from '../components/StyledMarkdown'
-import { getUpdates } from '../lib/getMarkdown'
+import { getUpdates, IUpdate } from '../lib/getMarkdown'
 
-const Home: NextPage<{updates: any[]}> = ({updates}) => {
+const Home: NextPage<{updates: IUpdate[]}> = ({updates}) => {
   return (
     <>
       <Head>

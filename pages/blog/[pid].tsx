@@ -36,8 +36,10 @@ const Post: NextPage = (props: any) => {
         <Header />
         <div className="flex pt-28 justify-center items-center px-6">
           <div className="max-w-4xl w-full">
-            <h1 className="text-4xl">{post.title}</h1>
-            <p>{post.date}</p>
+            <div className="pb-4">
+              <h1 className="text-4xl">{post.title}</h1>
+              <p>{post.date}</p>
+            </div>
             <StyledMarkdown>{post.post}</StyledMarkdown>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
-import StyledMarkdown from '../components/StyledMarkdown'
+import Pond from '../components/Pond'
 import { getUpdates, IUpdate } from '../lib/getMarkdown'
 
 const Home: NextPage<{updates: IUpdate[]}> = ({updates}) => {
@@ -16,9 +16,9 @@ const Home: NextPage<{updates: IUpdate[]}> = ({updates}) => {
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
-      <main>
+      <main className="h-screen overflow-hidden">
         <Header />
-        <div className="gap-3 py-28 flex justify-center flex-wrap">
+        <div className="gap-3 pt-28 flex justify-center flex-wrap">
           <div className="flex justify-center content-center">
             <div className="rounded-xl px-4 py-4 bg-gradient-to-tr from-teal-100 to-teal-50 w-96 h-min">
               <div className="flex mb-4 text-4xl">
@@ -37,21 +37,8 @@ const Home: NextPage<{updates: IUpdate[]}> = ({updates}) => {
               </p>
             </div>
           </div>
-          <div className="flex justify-center content-center">
-            <iframe src="https://lino-levan.github.io/smoll-physics/" width="400" height="400" scrolling="no" className="rounded-xl px-4 py-4 bg-teal-50"/>
-          </div>
         </div>
-        <div className="gap-3 pb-28 px-5 flex flex-col items-center flex-wrap">
-          <h2 className="text-emerald-500 text-3xl">~ Updates ~</h2>
-          {
-            updates.map((update, i)=>(
-              <div key={i} className="flex gap-4 text-center">
-                <p>{update.date}</p>
-                <StyledMarkdown>{update.content}</StyledMarkdown>
-              </div>
-            ))
-          }
-        </div>
+        <Pond />
       </main>
     </>
   )

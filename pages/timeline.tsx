@@ -19,20 +19,14 @@ const Home: NextPage<{updates: IUpdate[], posts: Record<string,IPost>}> = ({upda
         date: update.date,
         content: update.content
       }
-    )),
-    ...Object.entries(posts).map(([id,post])=>(
-      {
-        date: post.date,
-        content: `I wrote blog article "[${post.title}](/blog/${id}))"`
-      }
     ))
-  ].sort((a, b)=>new Date(a.date).getTime() - new Date(b.date).getTime())
+  ].sort((a, b)=>new Date(b.date).getTime() - new Date(a.date).getTime())
 
   return (
     <>
       <Head>
         <title>Lino Le Van</title>
-        <meta name="description" content="My portfolio site for my personal projects" />
+        <meta name="description" content="A timeline of all my updates" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -69,13 +63,10 @@ export default Home
 
 export async function getStaticProps() {
   const updates = getUpdates()
-  const posts = getPosts()
 
   return {
     props: {
-      updates,
-      posts
-
+      updates
     },
   }
 }

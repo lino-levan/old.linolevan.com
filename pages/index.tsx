@@ -2,9 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Pond from '../components/Pond'
-import { getUpdates, IUpdate } from '../lib/getMarkdown'
 
-const Home: NextPage<{updates: IUpdate[]}> = ({updates}) => {
+const Home: NextPage = () => {
   return (
     <>
       <Head>
@@ -29,8 +28,8 @@ const Home: NextPage<{updates: IUpdate[]}> = ({updates}) => {
                 I&apos;m Lino Le Van, an independent developer who contributes to open source projects in my free time.
               </p>
               <p>
-                ☁️ I&apos;m currently focusing on Pintform and Thoughtlesspack as my personal projects<br />
-                🦀 I&apos;m also learning Rust to build speedy applications<br />
+                ☁️ My personal projects are always fluctating. Check out ~/projects for my most recent stuff!<br />
+                🦀 I&apos;m learning Rust to build speedy applications<br />
                 👥 I&apos;m having fun contributing to Minicraft<br />
                 💻 Ask me about flash preservation!<br />
                 😄 Pronouns: He/Him<br />
@@ -45,13 +44,3 @@ const Home: NextPage<{updates: IUpdate[]}> = ({updates}) => {
 }
 
 export default Home
-
-export async function getStaticProps() {
-  const updates = getUpdates()
-
-  return {
-    props: {
-      updates
-    },
-  }
-}

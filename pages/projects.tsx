@@ -19,7 +19,16 @@ interface IProject {
 
 const Projects: NextPage = () => {
 
+  // for gradient we are going down this list: https://tailwindcss.com/docs/customizing-colors
   const projects: IProject[] = [
+    {
+      name: "Afterthought",
+      description: "A small voxel game demo. Written from scratch with threeJS and rapier.",
+      image: "/screenshots/afterthought.png",
+      demo: "https://afterthought.linolevan.com",
+      github: "https://github.com/lino-levan/afterthought",
+      gradient: "from-violet-300 to-violet-100"
+    },
     {
       name: "KClient",
       description: "A khanacademy program viewer and editor.",
@@ -34,14 +43,14 @@ const Projects: NextPage = () => {
       image: "/screenshots/opensearch.png",
       demo: "https://opensearch.linolevan.com",
       github: "https://github.com/lino-levan/open-search-site.git",
-      gradient: "from-gray-300 to-gray-100 bg-gradient-to-r"
+      gradient: "from-blue-300 to-blue-100"
     },
     {
       name: "Pintform",
       description: "The world's first form service that works for you. Make beautiful forms quickly, with all of the power and flexibility you'll ever need.",
       image: "/screenshots/pintform.png",
       demo: "https://pintform.com",
-      gradient: "from-yellow-200 via-gray-50 to-teal-100"
+      gradient: "from-sky-300 to-sky-100"
     },
     {
       name: "Smoll Physics",
@@ -49,7 +58,7 @@ const Projects: NextPage = () => {
       image: "/screenshots/smoll_physics.png",
       github: "https://github.com/lino-levan/smoll-physics",
       demo: "https://lino-levan.github.io/smoll-physics",
-      gradient: "from-indigo-200 via-red-200 to-yellow-100"
+      gradient: "from-cyan-300 to-cyan-100"
     },
     {
       name: "Dungeon Crawler",
@@ -57,7 +66,7 @@ const Projects: NextPage = () => {
       image: "/screenshots/dungeon_crawler.png",
       github: "https://github.com/lino-levan/dungeonCrawler",
       demo: "http://dungeon.linolevan.com:8080",
-      gradient: "from-rose-200 via-fuchsia-300 to-indigo-200"
+      gradient: "from-teal-300 to-teal-100"
     },
     {
       name: "Dinosaur Game ML",
@@ -65,7 +74,7 @@ const Projects: NextPage = () => {
       image: "/screenshots/dinosaur_game_ml.png",
       github: "https://github.com/lino-levan/dinosaurGameML",
       demo: "https://lino-levan.github.io/dinosaurGameML/",
-      gradient: "from-red-200 via-red-300 to-yellow-200"
+      gradient: "from-emerald-300 to-emerald-100"
     },
     {
       name: "Browser OS",
@@ -73,21 +82,21 @@ const Projects: NextPage = () => {
       image: "/screenshots/browser_os.png",
       github: "https://github.com/lino-levan/browserOS",
       demo: "https://lino-levan.github.io/browserOS/",
-      gradient: "from-yellow-100 to-red-100"
+      gradient: "from-green-300 to-green-100"
     },
     {
       name: "Ultimate Connect Four",
       description: "A small multiplayer connect 4 game that was made for Lancerhacks",
       image: "/screenshots/ultimate_connect_four.png",
       github: "https://github.com/lino-levan/ultimate-connect-four",
-      gradient: "from-green-200 via-blue-400 to-purple-500"
+      gradient: "from-lime-300 to-lime-100"
     },
     {
       name: "Elemental 5",
       description: "The continuation of Elemental 3 by Carykh and Elemental 4 by Dave. A solid demonstration of the idea of a fullstack project. An amazing demo project to check someone's skill. Video explaining history of the game coming soon.",
       image: "/screenshots/elemental.png",
       demo: "https://dev.elemental5.net",
-      gradient: "from-yellow-200 via-emerald-200 to-yellow-200"
+      gradient: "from-yellow-300 to-yellow-100"
     },
     {
       name: "Emoji Maker",
@@ -95,21 +104,21 @@ const Projects: NextPage = () => {
       image: "/screenshots/emoji_maker.png",
       github: "https://github.com/lino-levan/emojiMaker",
       demo: "https://lino-levan.github.io/emojiMaker/",
-      gradient: "from-green-300 via-yellow-300 to-pink-300"
+      gradient: "from-amber-300 to-amber-100"
     },
     {
       name: "Geoms.io",
       description: "My first io-style game! Made with @Oleks",
       image: "/screenshots/geoms.png",
       demo: "http://geoms.linolevan.com:42069",
-      gradient: "from-red-200 via-gray-300 to-blue-300"
+      gradient: "from-orange-300 to-orange-100"
     },
     {
       name: "Khanacademy",
       description: "I used to do most of my visualizations on Khanacademy.",
       image: "/screenshots/khanacademy.png",
       demo: "https://www.khanacademy.org/profile/Nickolos/projects",
-      gradient: "from-rose-100 to-teal-100"
+      gradient: "from-red-300 to-red-100"
     },
   ]
 
@@ -117,8 +126,8 @@ const Projects: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Smaller Projects</title>
-        <meta name="description" content="A list of my smaller projects" />
+        <title>Projects</title>
+        <meta name="description" content="A list of my web projects" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />

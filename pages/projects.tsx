@@ -144,7 +144,9 @@ const Projects: NextPage = () => {
               </div>
               <div>
                 <h1 className="text-2xl">
-                  {project.name}
+                  <a href={project.demo || project.github} target="_blank" rel="noreferrer">
+                    {project.name}
+                  </a>
                   {
                     project.demo?
                     <a href={project.demo} target="_blank" rel="noreferrer">

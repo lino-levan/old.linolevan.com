@@ -157,9 +157,7 @@ After coming this far, a lot of people expect that heap sort is going to be some
 1. Convert input array to a binary heap
 2. Run our pop method for every n in the binary heap
 ```
-That's it! Because we know step 1 can be done in O(n) time (or O(log(n)) if you're feeling lazy), we are only left we dealing with step 2. We already know however that our pop method runs in O(log(n)) time, which means that step 2 runs in O(log(n)). What this means is that we just implemented a sorting algorithm that runs in O(log(n)) time, and we didn't even need any weird pivot nonsense. 
-
-Normally, I would show a diagram here for the visual learners, but for any reasonable size array, it would take too many steps.
+That's it! Because we know step 1 can be done in O(n) time (or O(n log(n)) if you're feeling lazy), we are only left we dealing with step 2. We already know however that our pop method runs in O(log(n)) time, which means that step 2 runs in O(n log(n)). What this means is that we just implemented a sorting algorithm that runs in O(n log(n)) time, and we didn't even need any weird pivot nonsense.
 
 If you're interested in seeing a visualization of what I talked about here, [I recommend this one](http://btv.melezinek.cz/binary-heap.html) . It is unbelievably ugly, but it does explain the concept quite well. One of these days I might just make my own visualization software. If you just want to see how the array itself would change following these steps, here's a visualization:
 ![](/images/heap_sort.png)

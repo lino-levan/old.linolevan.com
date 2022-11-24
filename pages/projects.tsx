@@ -110,7 +110,7 @@ const Projects: NextPage = () => {
       name: "Geoms.io",
       description: "My first io-style game! Made with @Oleks",
       image: "/screenshots/geoms.png",
-      demo: "http://geoms.linolevan.com:42069",
+      demo: "https://geoms.io",
       gradient: "from-orange-300 to-orange-100"
     },
     {

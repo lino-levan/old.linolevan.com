@@ -30,7 +30,7 @@ const Home: NextPage = () => {
               <p>
                 ☁️ My personal projects are always fluctating. Check out ~/projects for my most recent stuff!<br />
                 🦀 I&apos;m learning Rust to build speedy applications<br />
-                👥 I&apos;m having fun contributing to Minicraft<br />
+                🦕 I&apos;m having fun contributing to Deno<br />
                 💻 Ask me about flash preservation!<br />
                 😄 Pronouns: He/Him<br />
               </p>

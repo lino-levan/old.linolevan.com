@@ -22,6 +22,13 @@ const Projects: NextPage = () => {
   // for gradient we are going down this list: https://tailwindcss.com/docs/customizing-colors
   const projects: IProject[] = [
     {
+      name: "Smuck.io",
+      description: "Another io game with the lovely @Oleks",
+      image: "/screenshots/smuck.png",
+      demo: "https://smuck.io",
+      gradient: "from-purple-300 to-purple-100"
+    },
+    {
       name: "Afterthought",
       description: "A small voxel game demo. Written from scratch with threeJS and rapier.",
       image: "/screenshots/afterthought.png",

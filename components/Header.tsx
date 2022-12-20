@@ -2,7 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const Header = () => {
-  let links = [{name:"~/projects", url:"/projects"}, {name:"~/blog", url:"/blog"}, {name:"~/timeline", url:"/timeline"}];
+  let links = [{name:"~/projects", url:"/projects"}, {name:"~/blog", url:"/blog"}];
 
   return (
     <div className="fixed z-10 flex min-w-full items-center justify-between py-4 px-4 backdrop-blur-[20px] backdrop-saturate-[1.8] backdrop-filter sm:px-10">

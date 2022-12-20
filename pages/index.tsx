@@ -2,8 +2,9 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Pond from '../components/Pond'
+import StyledMarkdown from '../components/StyledMarkdown'
 
-const Home: NextPage = () => {
+const Home: NextPage<{description: string}> = (props) => {
   return (
     <>
       <Head>
@@ -19,21 +20,16 @@ const Home: NextPage = () => {
         <Header />
         <div className="gap-3 pt-28 flex justify-center flex-wrap">
           <div className="flex justify-center content-center">
-            <div className="rounded-xl px-4 py-4 bg-gradient-to-tr from-teal-100 to-teal-50 w-96 h-min">
+            <div className="rounded-xl px-4 py-4 m-4 bg-gradient-to-tr from-teal-100 to-teal-50 max-w-xl h-min">
               <div className="flex mb-4 text-4xl">
                 <h1 className="animate-wiggle pr-4">👋</h1>
                 <h1>Hi there</h1>
               </div>
-              <p>
-                I&apos;m Lino Le Van, an independent developer who contributes to open source projects in my free time.
-              </p>
-              <p>
-                ☁️ My personal projects are always fluctating. Check out ~/projects for my most recent stuff!<br />
-                🦀 I&apos;m learning Rust to build speedy applications<br />
-                🦕 I&apos;m having fun contributing to Deno<br />
-                💻 Ask me about flash preservation!<br />
-                😄 Pronouns: He/Him<br />
-              </p>
+              <StyledMarkdown>
+                {
+                  props.description
+                }
+              </StyledMarkdown>
             </div>
           </div>
         </div>
@@ -44,3 +40,14 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export async function getServerSideProps() {
+  const req = await fetch("https://raw.githubusercontent.com/lino-levan/lino-levan/main/README.md")
+  const res = await req.text()
+
+  return {
+    props: {
+      description: res.split("Hi there\n")[1].split("###")[0]
+    },
+  }
+}

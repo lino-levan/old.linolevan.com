@@ -154,7 +154,9 @@ const Projects: NextPage = () => {
           projects.map((project)=> (
             <div key={project.name} className={`rounded-xl mt-6 p-6 bg-gradient-to-tr max-w-2xl shadow-lg ${project.gradient}`}>
               <div className="p-2">
-                <Image src={project.image} width={2880} height={1800} alt={project.name} className="rounded-md"/>
+                <a href={project.demo || project.github} target="_blank" rel="noreferrer">
+                  <Image src={project.image} width={2880} height={1800} alt={project.name} className="rounded-md shadow-md transition-all hover:shadow-lg"/>
+                </a>
               </div>
               <div>
                 <h1 className="text-2xl">

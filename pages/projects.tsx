@@ -22,6 +22,13 @@ const Projects: NextPage = () => {
   // for gradient we are going down this list: https://tailwindcss.com/docs/customizing-colors
   const projects: IProject[] = [
     {
+      name: "Canicli.com",
+      description: "A site to check if your cli tool name has already been taken.",
+      image: "/screenshots/canicli.png",
+      demo: "https://canicli.com",
+      gradient: "from-fuchsia-300 to-fuchsia-100"
+    },
+    {
       name: "Smuck.io",
       description: "Another io game with the lovely @Oleks",
       image: "/screenshots/smuck.png",

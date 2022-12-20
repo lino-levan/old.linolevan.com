@@ -9,23 +9,24 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "^12.3.1",
+    "next": "^13.0.7",
     "react": "^18.2.0",
-    "react-chrono": "^1.19.2",
+    "react-chrono": "^1.20.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.6.0",
-    "react-markdown": "^8.0.3",
-    "sass": "^1.55.0"
+    "react-icons": "^4.7.1",
+    "react-is": "^18.2.0",
+    "react-markdown": "^8.0.4",
+    "sass": "^1.57.1"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^4.27.1",
-    "@types/node": "^18.11.2",
-    "@types/react": "^18.0.21",
+    "@netlify/plugin-nextjs": "^4.29.4",
+    "@types/node": "^18.11.17",
+    "@types/react": "^18.0.26",
     "autoprefixer": "^10.4.12",
-    "eslint": "^8.25.0",
-    "eslint-config-next": "^12.3.1",
-    "postcss": "^8.4.18",
+    "eslint": "^8.30.0",
+    "eslint-config-next": "^13.0.7",
+    "postcss": "^8.4.20",
     "tailwindcss": "^3.1.8",
-    "typescript": "^4.8.4"
+    "typescript": "^4.9.4"
   }
 }

@@ -8,11 +8,13 @@ First, run the development server:
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the
+result.
 
 ## Notes
 
-This is built with NextJS at the moment. Probably check out their site for more dev tips.
+This is built with NextJS at the moment. Probably check out their site for more
+dev tips.
 
 ## Deploy on Vercel
 

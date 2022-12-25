@@ -1,7 +1,10 @@
 import { NextApiRequest, NextApiResponse } from "next/types";
 
 // yoinked from: https://github.com/Ihatetomatoes/nextjs-101-convertkit/blob/master/src/pages/api/subscribe.js
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {
   const { email } = req.query;
 
   if (!email) {
@@ -35,4 +38,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (error: any) {
     return res.status(500).json({ error: error.message || error.toString() });
   }
-};
+}

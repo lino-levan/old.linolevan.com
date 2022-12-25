@@ -75,25 +75,25 @@ const Post: NextPage = (props: any) => {
                   </input>
                   <button
                     className="bg-emerald-500 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded w-full"
-                    onClick={() => {
+                    onClick={async () => {
                       if (input.current) {
                         let cur = input.current as HTMLInputElement;
                         if (cur.value.length > 0) {
-                          fetch(`/api/subscribe?email=${cur.value}`)
-                            .then((res) => {
-                              return res.json();
-                            })
-                            .then((res) => {
-                              if (res.error) {
-                                setError("Failed to subscribe");
-                              } else {
-                                setSubscribed(true);
-                                setError("");
-                              }
-                            })
-                            .catch(() => {
-                              setError("Network Error");
-                            });
+                          try {
+                            const subscribeReq = await fetch(
+                              `/api/subscribe?email=${cur.value}`,
+                            );
+                            const subscribe = await subscribeReq.json();
+
+                            if (subscribe.error) {
+                              setError("Failed to subscribe");
+                            } else {
+                              setSubscribed(true);
+                              setError("");
+                            }
+                          } catch {
+                            setError("Network Error");
+                          }
                         } else {
                           setError("No Email Provided");
                         }
